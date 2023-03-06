@@ -1,0 +1,86 @@
+Types of resources:
+- VM (V)
+- Database (D)
+- Kuburnetes (K)
+- External Storage (E)
+-----------------------------------------------
+All shared parameters (V, D, K, E): Storage (S)
+
+Partially shared parameters:
+- (V, D, K): Instance Type (I)
+- (V and K): Operating System (O)
+- (V and E): Transactions (T)
+-----------------------------------------------
+Base-level interfaces:
+- (I, O, T)
+
+Interface inheritence:
+- (I): (V), (D), (K)
+- (O): (V) and (K)
+- (T): (V) and (E)
+
+Breakdown of parameters by interface:
+(S):
+- Storage Type
+- Storage Type Cost
+- Storage in GB
+- Storage Cost per GB
+- Total Storage Cost
+
+(I):
+- CPU Cores
+- CPU Cost per Unit
+- Memory
+- Memory Cost per GB
+- Temporary Storage in GB
+- Temporary Storage Cost per GB
+- Clock Speed in GHz
+- Clock Speed Cost Multiplier
+- I/O Speed in GB per Second
+- I/O Speed Cost Multiplier
+- GPU Cores
+- GPU Cores per Unit
+- Hours Used per Month
+- Total Instance Cost
+- CPU-Memory Multiplier (Nomenclature)
+- GPU-CPU Multiplier (Nomenclature)
+- Instance Category (Nomenclature)
+- Size (Nomenclature)
+- Instance Name (Nomenclature)
+
+(O):
+- Operating System Type
+- Total Operating System Cost
+
+(T):
+- Transactions per Month (Units of 10000)
+- Transaction Cost per Unit
+- Total Transaction Cost
+-----------------------------------------------
+Breakdown of parameters by class:
+(V):
+- (S)
+- (I)
+- (O)
+- (T)
+- Final VM Cost
+
+(D):
+- (S)
+- (I)
+- Back-up Storage Type
+- Back-up Storage Type Cost
+- Back-up Storage in GB
+- Back-up Storage Cost per GB
+- Final Database Cost
+
+(K):
+- (S)
+- (I)
+- (O)
+- Final Kuburnetes Cost
+
+(E):
+- (S)
+- (T)
+- Final External Storage Cost
